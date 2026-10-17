@@ -1,0 +1,15 @@
+# Скомпільовані ресурси (Dota генерує їх сама з папки content/)
+*.vpcf_c
+*.vtex_c
+*.vmat_c
+*.vmdl_c
+*.vmap_c
+*.vsndevts_c
+*.vxml_c
+*.vcss_c
+*.vjs_c
+*.vpk
+
+# Службові файли Hammer
+content/maps/*.vmap.bak
+content/maps/*_autosave*
