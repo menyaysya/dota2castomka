@@ -1,0 +1,16 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/cla_hud.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/cla_hud.js" />
+	</scripts>
+	<!-- hittest="false": панель не перехоплює кліки, щоб не заважати керуванню героєм (ТЗ 14.2) -->
+	<Panel class="ClaHudRoot" hittest="false">
+		<Panel id="ClaHudBox" hittest="false">
+			<Label id="ClaTimer" text="--:--" />
+			<Label id="ClaStats" text="" />
+			<Label id="ClaTrust" class="Unverified" text="#cla_trust_T0" />
+		</Panel>
+	</Panel>
+</root>

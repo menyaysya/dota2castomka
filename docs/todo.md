@@ -29,20 +29,20 @@
 
 ## Етап 0 — Підготовка і feasibility
 
-- [ ] **0.1 Перейменування аддона.** Створити `carry_lane_academy` у Workshop Tools, перенести файли, переробити junction (дії власника за інструкцією).
-- [ ] **0.2 Чистка шаблону.** Видалити приклади (`sand_path_*`, `basic_*` партикли, `template_map`).
-- [ ] **0.3 Каркас коду** за ТЗ 15.1:
+- [x] **0.1 Перейменування аддона.** Створити `carry_lane_academy` у Workshop Tools, перенести файли, переробити junction (дії власника за інструкцією).
+- [x] **0.2 Чистка шаблону.** Видалити приклади (`sand_path_*`, `basic_*` партикли, `template_map`).
+- [~] **0.3 Каркас коду** за ТЗ 15.1:
   - `game/scripts/vscripts/addon_game_mode.lua` — лише точка входу
   - `core/{bootstrap,config,events,session,log}.lua`
   - `gameplay/{arena,waves,economy,metrics,scoring}.lua`
   - `ai/{brain,roles,skills,difficulty,items}.lua`
   - `online/{transport,identity,leaderboard}.lua` (заглушки з trust tier T0)
   - `tests/{smoke,scoring,bots}.lua`
-  - `configs/{ai_levels,score_weights,arenas}.lua` (версіоновані)
-- [ ] **0.4 Локалізація.** `resource/addon_ukrainian.txt` + `addon_english.txt`.
+  - `configs/{ruleset,ai_levels,score_weights}.lua` (версіоновані; лежать у `scripts/vscripts/configs/`, бо Lua читає лише звідти)
+- [~] **0.4 Локалізація.** `resource/addon_ukrainian.txt` + `addon_english.txt`.
 - [ ] **0.5 Тестова карта-spike.** Маленька `.vmap`: спавн героя, одна вежа, магазин.
 - [ ] **0.6 Перевірки рушія** (Lua-консоль): спавн героя на рівні 1 зі штатним золотом; магазин і кур'єр; таймер; `CustomNetTables` → Panorama.
-- [ ] **0.7 Мінімальний Panorama HUD:** годинник + LH/DN.
+- [~] **0.7 Мінімальний Panorama HUD:** годинник + LH/DN.
 - [ ] **0.8 `docs/feasibility.md`:** що реально запущено, логи/скриншоти, підтверджені блокери.
 
 **Приймання етапу 0:** аддон запускається в Dota 2 Tools; у консолі видно `[CLA] bootstrap ok`; HUD показує таймер.

@@ -1,0 +1,11 @@
+﻿"lang"
+{
+	"Language"	"Ukrainian"
+	"Tokens"
+	{
+		"addon_game_name"	"Carry Lane Academy"
+		"cla_trust_T0"	"Локально · не враховується в рейтинг"
+		"cla_trust_T1"	"Онлайн · неперевірено"
+		"cla_trust_T2"	"Рейтингова гра"
+	}
+}
