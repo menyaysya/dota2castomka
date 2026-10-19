@@ -1,15 +1,21 @@
 # Carry Lane Academy
 
-Тренажер ліній для Dota 2 (кастомна гра). Аддон: `carry_lane_academy`.
+Особистий тренажер ліній для Dota 2 на стандартній карті.
+Обираєш сторону, лінію, складність ботів і тривалість, потім будь-якого героя, і тренуєшся проти ботів Dota на одній лінії. У кінці бачиш результати.
+
+**Запуск:** двічі клацнути [start_training.bat](start_training.bat). Детальніше: [docs/run.md](docs/run.md).
+
 ТЗ: [Carry_Lane_Academy_Technical_Spec_UA_v1.0.pdf](Carry_Lane_Academy_Technical_Spec_UA_v1.0.pdf) · План: [docs/todo.md](docs/todo.md)
 
 ## Структура
 
-- `game/` — скрипти (Lua), KV-файли героїв/здібностей/предметів, локалізація, UI (Panorama).
+- `game/scripts/vscripts/` — логіка на Lua: `core/` (запуск, сесія, таймер), `gameplay/` (лінія, боти, метрики), `configs/` (налаштування).
+- `game/panorama/` — інтерфейс: меню, HUD, результати.
+- `game/resource/` — тексти українською та англійською.
   У Dota: `dota 2 beta\game\dota_addons\carry_lane_academy`
-- `content/` — вихідні ресурси: карти (Hammer), матеріали, партикли.
+- `content/` — вихідні ресурси (зараз не використовуються).
   У Dota: `dota 2 beta\content\dota_addons\carry_lane_academy`
-- `docs/` — план, документація.
+- `docs/` — план, інструкції.
 
 ## Підключення репозиторію до Dota (один раз)
 

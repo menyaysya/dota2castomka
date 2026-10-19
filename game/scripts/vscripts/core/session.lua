@@ -35,12 +35,22 @@ local TRANSITIONS = {
 
 function Session.Init( settings )
 	Session.state = S.LOBBY
-	Session.settings = settings          -- { side, lane, hero, difficulty, duration_s, mode }
+	Session.settings = settings          -- { side, lane, difficulty, duration_s }
 	Session.started_at = nil             -- ігровий час старту PLAYING
 	Session.invalid_reason = nil
 	Session.flags = {}                   -- M12 Scenario flags: debug, local_host, ...
-	CLA.Log.Info( "Сесія: %s/%s, герой %s, складність %d, %d с",
-		settings.side, settings.lane, settings.hero, settings.difficulty, settings.duration_s )
+end
+
+-- Налаштування, обрані гравцем у меню. Змінювати можна лише до старту (LOBBY).
+function Session.Configure( settings )
+	if Session.state ~= S.LOBBY then
+		CLA.Log.Error( "Налаштування сесії не можна змінити у стані %s", Session.state )
+		return false
+	end
+	Session.settings = settings
+	CLA.Log.Info( "Сесія: %s/%s, складність %d, %d с",
+		settings.side, settings.lane, settings.difficulty, settings.duration_s )
+	return true
 end
 
 function Session.SetState( newState, reason )

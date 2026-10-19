@@ -9,8 +9,23 @@
 	<Panel class="ClaHudRoot" hittest="false">
 		<Panel id="ClaHudBox" hittest="false">
 			<Label id="ClaTimer" text="--:--" />
+			<Label id="ClaInfo" text="" />
 			<Label id="ClaStats" text="" />
-			<Label id="ClaTrust" class="Unverified" text="#cla_trust_T0" />
+		</Panel>
+
+		<!-- Екран результатів: прихований, доки сервер не надішле result_<playerID> -->
+		<Panel id="ClaResult" class="Hidden">
+			<Label class="ClaResultTitle" text="#cla_result_title" />
+			<Label id="ClaResultInfo" text="" />
+			<Panel class="ClaResultGrid">
+				<Panel class="ClaResultCell"><Label id="ResLH" class="ClaResultValue" text="0" /><Label class="ClaResultName" text="#cla_res_lh" /></Panel>
+				<Panel class="ClaResultCell"><Label id="ResDN" class="ClaResultValue" text="0" /><Label class="ClaResultName" text="#cla_res_dn" /></Panel>
+				<Panel class="ClaResultCell"><Label id="ResGPM" class="ClaResultValue" text="0" /><Label class="ClaResultName" text="#cla_res_gpm" /></Panel>
+				<Panel class="ClaResultCell"><Label id="ResXPM" class="ClaResultValue" text="0" /><Label class="ClaResultName" text="#cla_res_xpm" /></Panel>
+				<Panel class="ClaResultCell"><Label id="ResLevel" class="ClaResultValue" text="0" /><Label class="ClaResultName" text="#cla_res_level" /></Panel>
+				<Panel class="ClaResultCell"><Label id="ResDeaths" class="ClaResultValue" text="0" /><Label class="ClaResultName" text="#cla_res_deaths" /></Panel>
+			</Panel>
+			<Button class="ClaRestart" onactivate="ClaRestart()"><Label text="#cla_restart" /></Button>
 		</Panel>
 	</Panel>
 </root>

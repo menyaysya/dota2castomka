@@ -24,6 +24,13 @@
 	horizontal-align: center;
 }
 
+#ClaInfo
+{
+	font-size: 13px;
+	color: #4fd1c5;
+	horizontal-align: center;
+}
+
 #ClaStats
 {
 	font-size: 16px;
@@ -31,10 +38,85 @@
 	horizontal-align: center;
 }
 
-/* Жовтий — непідтверджений рейтинг (ТЗ 14.2) */
-#ClaTrust.Unverified
+/* ---------- Результати ---------- */
+
+#ClaResult
 {
-	font-size: 12px;
-	color: #e3b341;
 	horizontal-align: center;
+	vertical-align: center;
+	flow-children: down;
+	padding: 28px 40px;
+	background-color: #0e1a26f2;
+	border: 1px solid #2a4a5a;
+	border-radius: 10px;
+}
+
+#ClaResult.Hidden
+{
+	visibility: collapse;
+}
+
+.ClaResultTitle
+{
+	font-size: 34px;
+	font-weight: bold;
+	color: #4fd1c5;
+	horizontal-align: center;
+}
+
+#ClaResultInfo
+{
+	font-size: 16px;
+	color: #b8cfd4;
+	horizontal-align: center;
+	margin-bottom: 16px;
+}
+
+.ClaResultGrid
+{
+	flow-children: right-wrap;
+	width: 540px;
+}
+
+.ClaResultCell
+{
+	width: 180px;
+	flow-children: down;
+	margin-bottom: 14px;
+}
+
+.ClaResultValue
+{
+	font-size: 36px;
+	font-weight: bold;
+	color: #e8f4f4;
+	horizontal-align: center;
+}
+
+.ClaResultName
+{
+	font-size: 14px;
+	color: #8aa3ad;
+	horizontal-align: center;
+}
+
+.ClaRestart
+{
+	horizontal-align: center;
+	margin-top: 12px;
+	padding: 12px 40px;
+	background-color: #0f766e;
+	border-radius: 8px;
+}
+
+.ClaRestart:hover
+{
+	background-color: #14968b;
+}
+
+.ClaRestart Label
+{
+	font-size: 22px;
+	font-weight: bold;
+	color: #ffffff;
 }

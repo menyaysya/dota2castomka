@@ -1,5 +1,8 @@
 <root>
 	<Panel>
+		<!-- Меню перед грою: замінює стандартний екран вибору команд -->
+		<CustomUIElement type="GameSetup" layoutfile="file://{resources}/layout/custom_game/cla_setup.xml" />
+		<!-- HUD під час тренування + результати -->
 		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/cla_hud.xml" />
 	</Panel>
 </root>

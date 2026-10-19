@@ -1,0 +1,46 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/cla_setup.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/cla_setup.js" />
+	</scripts>
+	<Panel class="ClaSetupRoot">
+		<Panel id="ClaSetupBox">
+			<Label class="ClaTitle" text="Carry Lane Academy" />
+
+			<Label class="ClaGroupTitle" text="#cla_side" />
+			<Panel class="ClaRow">
+				<Button id="side_radiant" class="ClaOption" onactivate="ClaSelect('side', 'radiant')"><Label text="#cla_side_radiant" /></Button>
+				<Button id="side_dire" class="ClaOption" onactivate="ClaSelect('side', 'dire')"><Label text="#cla_side_dire" /></Button>
+			</Panel>
+
+			<Label class="ClaGroupTitle" text="#cla_lane" />
+			<Panel class="ClaRow">
+				<Button id="lane_safe" class="ClaOption" onactivate="ClaSelect('lane', 'safe')"><Label text="#cla_lane_safe" /></Button>
+				<Button id="lane_mid" class="ClaOption" onactivate="ClaSelect('lane', 'mid')"><Label text="#cla_lane_mid" /></Button>
+				<Button id="lane_off" class="ClaOption" onactivate="ClaSelect('lane', 'off')"><Label text="#cla_lane_off" /></Button>
+			</Panel>
+
+			<Label class="ClaGroupTitle" text="#cla_difficulty" />
+			<Panel class="ClaRow">
+				<Button id="difficulty_1" class="ClaOption" onactivate="ClaSelect('difficulty', 1)"><Label text="#cla_difficulty_1" /></Button>
+				<Button id="difficulty_2" class="ClaOption" onactivate="ClaSelect('difficulty', 2)"><Label text="#cla_difficulty_2" /></Button>
+				<Button id="difficulty_3" class="ClaOption" onactivate="ClaSelect('difficulty', 3)"><Label text="#cla_difficulty_3" /></Button>
+				<Button id="difficulty_4" class="ClaOption" onactivate="ClaSelect('difficulty', 4)"><Label text="#cla_difficulty_4" /></Button>
+				<Button id="difficulty_5" class="ClaOption" onactivate="ClaSelect('difficulty', 5)"><Label text="#cla_difficulty_5" /></Button>
+			</Panel>
+
+			<Label class="ClaGroupTitle" text="#cla_duration" />
+			<Panel class="ClaRow">
+				<Button id="duration_s_300" class="ClaOption" onactivate="ClaSelect('duration_s', 300)"><Label text="#cla_duration_5" /></Button>
+				<Button id="duration_s_600" class="ClaOption" onactivate="ClaSelect('duration_s', 600)"><Label text="#cla_duration_10" /></Button>
+				<Button id="duration_s_900" class="ClaOption" onactivate="ClaSelect('duration_s', 900)"><Label text="#cla_duration_15" /></Button>
+			</Panel>
+
+			<Label id="ClaHint" class="ClaHint" text="#cla_setup_hint" />
+
+			<Button id="ClaStart" class="ClaStart" onactivate="ClaStart()"><Label text="#cla_start" /></Button>
+		</Panel>
+	</Panel>
+</root>
